@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "./context";
 
-const Submenu = () => {
+export interface ISubmenu {}
+
+const Submenu: React.FC<ISubmenu> = (): React.ReactElement => {
   const {
     isSubmenuOpen,
     location,

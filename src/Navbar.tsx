@@ -3,7 +3,9 @@ import logo from "./images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 
-const Navbar = () => {
+export interface INavbar {}
+
+const Navbar: React.FC<INavbar> = (): React.ReactElement => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 
   const displaySubmenu = (e: any) => {
@@ -62,7 +64,7 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button type="button" className="btn signin-btn">
+        <button type="button" className="button-70">
           Sign In
         </button>
       </div>

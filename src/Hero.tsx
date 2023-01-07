@@ -2,7 +2,9 @@ import React from "react";
 import phoneImg from "./images/phone.svg";
 import { useGlobalContext } from "./context";
 
-const Hero = () => {
+export interface IHero {}
+
+const Hero: React.FC<IHero> = (): React.ReactElement => {
   const { closeSubmenu } = useGlobalContext();
 
   return (
@@ -15,7 +17,7 @@ const Hero = () => {
             Stripe's software and APIs to make payments, send payouts, and
             manage their businesses online.
           </p>
-          <button className="btn">Start now</button>
+          <button className="button-70">Start now</button>
         </article>
         <article className="hero-images">
           <img src={phoneImg} className="phone-img" alt="phone" />

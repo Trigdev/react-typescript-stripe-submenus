@@ -3,7 +3,9 @@ import { FaTimes } from "react-icons/fa";
 import sublinks from "./data";
 import { useGlobalContext } from "./context";
 
-const Sidebar = () => {
+export interface ISidebar {}
+
+const Sidebar: React.FC<ISidebar> = (): React.ReactElement => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (

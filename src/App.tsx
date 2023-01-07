@@ -4,7 +4,9 @@ import Sidebar from "./Sidebar";
 import Hero from "./Hero";
 import Submenu from "./Submenu";
 
-const App = () => {
+export interface IApp {}
+
+const App: React.FC<IApp> = (): React.ReactElement => {
   return (
     <>
       <Navbar />
